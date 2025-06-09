@@ -3,7 +3,9 @@ const express = require('express')
 const cors = require('cors')
 
 const app = express()
-app.use(cors())
+
+// Allow only your frontend domain
+app.use(cors({origin: 'https://insta-login-frontend.vercel.app'}))
 
 var uname = ["Thilaga", "1234567890", "insta@gmail.com"]
 var pass = 1234
